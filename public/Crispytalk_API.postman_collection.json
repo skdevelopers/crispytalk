@@ -1,0 +1,1219 @@
+{
+    "info": {
+      "_postman_id": "d2a3f43d-8f2e-4e2d-8b3f-123456789abc",
+      "name": "Crispytalk API Collection",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+      {
+        "name": "Public Routes",
+        "item": [
+          {
+            "name": "Register",
+            "request": {
+              "method": "POST",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n    \"name\": \"John Doe\",\n    \"email\": \"john.doe@example.com\",\n    \"password\": \"password\",\n    \"password_confirmation\": \"password\"\n}"
+              },
+              "url": {
+                "raw": "https://crispytalk.info/api/register",
+                "protocol": "https",
+                "host": [
+                  "crispytalk",
+                  "info"
+                ],
+                "path": [
+                  "api",
+                  "register"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Login",
+            "request": {
+              "method": "POST",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n    \"email\": \"john.doe@example.com\",\n    \"password\": \"password\"\n}"
+              },
+              "url": {
+                "raw": "https://crispytalk.info/api/login",
+                "protocol": "https",
+                "host": [
+                  "crispytalk",
+                  "info"
+                ],
+                "path": [
+                  "api",
+                  "login"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Password Email",
+            "request": {
+              "method": "POST",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n    \"email\": \"john.doe@example.com\"\n}"
+              },
+              "url": {
+                "raw": "https://crispytalk.info/api/password/email",
+                "protocol": "https",
+                "host": [
+                  "crispytalk",
+                  "info"
+                ],
+                "path": [
+                  "api",
+                  "password",
+                  "email"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Password Reset",
+            "request": {
+              "method": "POST",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n    \"email\": \"john.doe@example.com\",\n    \"token\": \"your-reset-token\",\n    \"password\": \"newpassword\",\n    \"password_confirmation\": \"newpassword\"\n}"
+              },
+              "url": {
+                "raw": "https://crispytalk.info/api/password/reset",
+                "protocol": "https",
+                "host": [
+                  "crispytalk",
+                  "info"
+                ],
+                "path": [
+                  "api",
+                  "password",
+                  "reset"
+                ]
+              }
+            },
+            "response": []
+          }
+        ]
+      },
+      {
+        "name": "Authenticated Routes",
+        "item": [
+          {
+            "name": "Logout",
+            "request": {
+              "method": "POST",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Authorization",
+                  "value": "Bearer 33|uHtJW3paIwdyDJgf1xhxbSkgN5JfJBOaVbOmV0Qicfb0e8d5",
+                  "type": "text"
+                }
+              ],
+              "url": {
+                "raw": "https://crispytalk.info/api/logout",
+                "protocol": "https",
+                "host": [
+                  "crispytalk",
+                  "info"
+                ],
+                "path": [
+                  "api",
+                  "logout"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Refresh Token",
+            "request": {
+              "method": "POST",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Authorization",
+                  "value": "Bearer 33|uHtJW3paIwdyDJgf1xhxbSkgN5JfJBOaVbOmV0Qicfb0e8d5",
+                  "type": "text"
+                }
+              ],
+              "url": {
+                "raw": "https://crispytalk.info/api/refresh",
+                "protocol": "https",
+                "host": [
+                  "crispytalk",
+                  "info"
+                ],
+                "path": [
+                  "api",
+                  "refresh"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Get User Profile",
+            "request": {
+              "method": "GET",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Authorization",
+                  "value": "Bearer 33|uHtJW3paIwdyDJgf1xhxbSkgN5JfJBOaVbOmV0Qicfb0e8d5",
+                  "type": "text"
+                }
+              ],
+              "url": {
+                "raw": "https://crispytalk.info/api/user",
+                "protocol": "https",
+                "host": [
+                  "crispytalk",
+                  "info"
+                ],
+                "path": [
+                  "api",
+                  "user"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Get All Users",
+            "request": {
+              "method": "GET",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Authorization",
+                  "value": "Bearer 33|uHtJW3paIwdyDJgf1xhxbSkgN5JfJBOaVbOmV0Qicfb0e8d5",
+                  "type": "text"
+                }
+              ],
+              "url": {
+                "raw": "https://crispytalk.info/api/users",
+                "protocol": "https",
+                "host": [
+                  "crispytalk",
+                  "info"
+                ],
+                "path": [
+                  "api",
+                  "users"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Get User by ID",
+            "request": {
+              "method": "GET",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Authorization",
+                  "value": "Bearer 33|uHtJW3paIwdyDJgf1xhxbSkgN5JfJBOaVbOmV0Qicfb0e8d5",
+                  "type": "text"
+                }
+              ],
+              "url": {
+                "raw": "https://crispytalk.info/api/user/1",
+                "protocol": "https",
+                "host": [
+                  "crispytalk",
+                  "info"
+                ],
+                "path": [
+                  "api",
+                  "user",
+                  "1"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Update Profile",
+            "request": {
+              "method": "PUT",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Authorization",
+                  "value": "Bearer 33|uHtJW3paIwdyDJgf1xhxbSkgN5JfJBOaVbOmV0Qicfb0e8d5",
+                  "type": "text"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n  \"name\": \"New Name\",\n  \"nickName\": \"new_nick\"\n}"
+              },
+              "url": {
+                "raw": "https://crispytalk.info/api/user/update",
+                "protocol": "https",
+                "host": [
+                  "crispytalk",
+                  "info"
+                ],
+                "path": [
+                  "api",
+                  "user",
+                  "update"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Delete Account",
+            "request": {
+              "method": "DELETE",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Authorization",
+                  "value": "Bearer 33|uHtJW3paIwdyDJgf1xhxbSkgN5JfJBOaVbOmV0Qicfb0e8d5",
+                  "type": "text"
+                }
+              ],
+              "url": {
+                "raw": "https://crispytalk.info/api/user/delete",
+                "protocol": "https",
+                "host": [
+                  "crispytalk",
+                  "info"
+                ],
+                "path": [
+                  "api",
+                  "user",
+                  "delete"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Add Comment",
+            "request": {
+              "method": "POST",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Authorization",
+                  "value": "Bearer 33|uHtJW3paIwdyDJgf1xhxbSkgN5JfJBOaVbOmV0Qicfb0e8d5",
+                  "type": "text"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n  \"postId\": 1,\n  \"comment\": \"Great post!\"\n}"
+              },
+              "url": {
+                "raw": "https://crispytalk.info/api/comments/add",
+                "protocol": "https",
+                "host": [
+                  "crispytalk",
+                  "info"
+                ],
+                "path": [
+                  "api",
+                  "comments",
+                  "add"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Get Comments for a Post",
+            "request": {
+              "method": "GET",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Authorization",
+                  "value": "Bearer 33|uHtJW3paIwdyDJgf1xhxbSkgN5JfJBOaVbOmV0Qicfb0e8d5",
+                  "type": "text"
+                }
+              ],
+              "url": {
+                "raw": "https://crispytalk.info/api/comments/1",
+                "protocol": "https",
+                "host": [
+                  "crispytalk",
+                  "info"
+                ],
+                "path": [
+                  "api",
+                  "comments",
+                  "1"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Delete Comment",
+            "request": {
+              "method": "DELETE",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Authorization",
+                  "value": "Bearer 33|uHtJW3paIwdyDJgf1xhxbSkgN5JfJBOaVbOmV0Qicfb0e8d5",
+                  "type": "text"
+                }
+              ],
+              "url": {
+                "raw": "https://crispytalk.info/api/comments/1",
+                "protocol": "https",
+                "host": [
+                  "crispytalk",
+                  "info"
+                ],
+                "path": [
+                  "api",
+                  "comments",
+                  "1"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Upload Video",
+            "request": {
+              "method": "POST",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Authorization",
+                  "value": "Bearer 33|uHtJW3paIwdyDJgf1xhxbSkgN5JfJBOaVbOmV0Qicfb0e8d5",
+                  "type": "text"
+                }
+              ],
+              "body": {
+                "mode": "formdata",
+                "formdata": [
+                  {
+                    "key": "file",
+                    "type": "file",
+                    "src": ""
+                  }
+                ]
+              },
+              "url": {
+                "raw": "https://crispytalk.info/api/videos/upload",
+                "protocol": "https",
+                "host": [
+                  "crispytalk",
+                  "info"
+                ],
+                "path": [
+                  "api",
+                  "videos",
+                  "upload"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Get My Videos",
+            "request": {
+              "method": "GET",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Authorization",
+                  "value": "Bearer 33|uHtJW3paIwdyDJgf1xhxbSkgN5JfJBOaVbOmV0Qicfb0e8d5",
+                  "type": "text"
+                }
+              ],
+              "url": {
+                "raw": "https://crispytalk.info/api/videos/my",
+                "protocol": "https",
+                "host": [
+                  "crispytalk",
+                  "info"
+                ],
+                "path": [
+                  "api",
+                  "videos",
+                  "my"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Home Feed Videos",
+            "request": {
+              "method": "GET",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Authorization",
+                  "value": "Bearer 33|uHtJW3paIwdyDJgf1xhxbSkgN5JfJBOaVbOmV0Qicfb0e8d5",
+                  "type": "text"
+                }
+              ],
+              "url": {
+                "raw": "https://crispytalk.info/api/videos/home",
+                "protocol": "https",
+                "host": [
+                  "crispytalk",
+                  "info"
+                ],
+                "path": [
+                  "api",
+                  "videos",
+                  "home"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Get User Profile Videos",
+            "request": {
+              "method": "GET",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Authorization",
+                  "value": "Bearer 33|uHtJW3paIwdyDJgf1xhxbSkgN5JfJBOaVbOmV0Qicfb0e8d5",
+                  "type": "text"
+                }
+              ],
+              "url": {
+                "raw": "https://crispytalk.info/api/videos/user/1",
+                "protocol": "https",
+                "host": [
+                  "crispytalk",
+                  "info"
+                ],
+                "path": [
+                  "api",
+                  "videos",
+                  "user",
+                  "1"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Get Friends' Videos",
+            "request": {
+              "method": "GET",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Authorization",
+                  "value": "Bearer 33|uHtJW3paIwdyDJgf1xhxbSkgN5JfJBOaVbOmV0Qicfb0e8d5",
+                  "type": "text"
+                }
+              ],
+              "url": {
+                "raw": "https://crispytalk.info/api/videos/friends",
+                "protocol": "https",
+                "host": [
+                  "crispytalk",
+                  "info"
+                ],
+                "path": [
+                  "api",
+                  "videos",
+                  "friends"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Get Video by ID",
+            "request": {
+              "method": "GET",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Authorization",
+                  "value": "Bearer 33|uHtJW3paIwdyDJgf1xhxbSkgN5JfJBOaVbOmV0Qicfb0e8d5",
+                  "type": "text"
+                }
+              ],
+              "url": {
+                "raw": "https://crispytalk.info/api/videos/1",
+                "protocol": "https",
+                "host": [
+                  "crispytalk",
+                  "info"
+                ],
+                "path": [
+                  "api",
+                  "videos",
+                  "1"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Update Video",
+            "request": {
+              "method": "PUT",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Authorization",
+                  "value": "Bearer 33|uHtJW3paIwdyDJgf1xhxbSkgN5JfJBOaVbOmV0Qicfb0e8d5",
+                  "type": "text"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n    \"audience\": \"friends\",\n    \"likes\": 10,\n    \"views\": 100\n}"
+              },
+              "url": {
+                "raw": "https://crispytalk.info/api/videos/1",
+                "protocol": "https",
+                "host": [
+                  "crispytalk",
+                  "info"
+                ],
+                "path": [
+                  "api",
+                  "videos",
+                  "1"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Delete Video",
+            "request": {
+              "method": "DELETE",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Authorization",
+                  "value": "Bearer 33|uHtJW3paIwdyDJgf1xhxbSkgN5JfJBOaVbOmV0Qicfb0e8d5",
+                  "type": "text"
+                }
+              ],
+              "url": {
+                "raw": "https://crispytalk.info/api/videos/1",
+                "protocol": "https",
+                "host": [
+                  "crispytalk",
+                  "info"
+                ],
+                "path": [
+                  "api",
+                  "videos",
+                  "1"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Upload Chat Media",
+            "request": {
+              "method": "POST",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Authorization",
+                  "value": "Bearer 33|uHtJW3paIwdyDJgf1xhxbSkgN5JfJBOaVbOmV0Qicfb0e8d5",
+                  "type": "text"
+                }
+              ],
+              "body": {
+                "mode": "formdata",
+                "formdata": [
+                  {
+                    "key": "file",
+                    "type": "file",
+                    "src": ""
+                  }
+                ]
+              },
+              "url": {
+                "raw": "https://crispytalk.info/api/chat/upload-media",
+                "protocol": "https",
+                "host": [
+                  "crispytalk",
+                  "info"
+                ],
+                "path": [
+                  "api",
+                  "chat",
+                  "upload-media"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Send Notification",
+            "request": {
+              "method": "POST",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Authorization",
+                  "value": "Bearer 33|uHtJW3paIwdyDJgf1xhxbSkgN5JfJBOaVbOmV0Qicfb0e8d5",
+                  "type": "text"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n    \"message\": \"New like on your post\",\n    \"postId\": 1,\n    \"recipientId\": 2,\n    \"senderId\": 3,\n    \"type\": \"like\",\n    \"timestamp\": \"2025-03-11T10:00:00Z\"\n}"
+              },
+              "url": {
+                "raw": "https://crispytalk.info/api/notifications/send",
+                "protocol": "https",
+                "host": [
+                  "crispytalk",
+                  "info"
+                ],
+                "path": [
+                  "api",
+                  "notifications",
+                  "send"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Get Notifications",
+            "request": {
+              "method": "GET",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Authorization",
+                  "value": "Bearer 33|uHtJW3paIwdyDJgf1xhxbSkgN5JfJBOaVbOmV0Qicfb0e8d5",
+                  "type": "text"
+                }
+              ],
+              "url": {
+                "raw": "https://crispytalk.info/api/notifications",
+                "protocol": "https",
+                "host": [
+                  "crispytalk",
+                  "info"
+                ],
+                "path": [
+                  "api",
+                  "notifications"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Mark Notification as Read",
+            "request": {
+              "method": "PATCH",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Authorization",
+                  "value": "Bearer 33|uHtJW3paIwdyDJgf1xhxbSkgN5JfJBOaVbOmV0Qicfb0e8d5",
+                  "type": "text"
+                }
+              ],
+              "url": {
+                "raw": "https://crispytalk.info/api/notifications/1/read",
+                "protocol": "https",
+                "host": [
+                  "crispytalk",
+                  "info"
+                ],
+                "path": [
+                  "api",
+                  "notifications",
+                  "1",
+                  "read"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Mark All Notifications as Read",
+            "request": {
+              "method": "PATCH",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Authorization",
+                  "value": "Bearer 33|uHtJW3paIwdyDJgf1xhxbSkgN5JfJBOaVbOmV0Qicfb0e8d5",
+                  "type": "text"
+                }
+              ],
+              "url": {
+                "raw": "https://crispytalk.info/api/notifications/mark-all-read",
+                "protocol": "https",
+                "host": [
+                  "crispytalk",
+                  "info"
+                ],
+                "path": [
+                  "api",
+                  "notifications",
+                  "mark-all-read"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Get Chats",
+            "request": {
+              "method": "GET",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Authorization",
+                  "value": "Bearer 33|uHtJW3paIwdyDJgf1xhxbSkgN5JfJBOaVbOmV0Qicfb0e8d5",
+                  "type": "text"
+                }
+              ],
+              "url": {
+                "raw": "https://crispytalk.info/api/chats",
+                "protocol": "https",
+                "host": [
+                  "crispytalk",
+                  "info"
+                ],
+                "path": [
+                  "api",
+                  "chats"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Create Chat",
+            "request": {
+              "method": "POST",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Authorization",
+                  "value": "Bearer 33|uHtJW3paIwdyDJgf1xhxbSkgN5JfJBOaVbOmV0Qicfb0e8d5",
+                  "type": "text"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n    \"user_ids\": [1,2,3]\n}"
+              },
+              "url": {
+                "raw": "https://crispytalk.info/api/chats",
+                "protocol": "https",
+                "host": [
+                  "crispytalk",
+                  "info"
+                ],
+                "path": [
+                  "api",
+                  "chats"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Get Chat by ID",
+            "request": {
+              "method": "GET",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Authorization",
+                  "value": "Bearer 33|uHtJW3paIwdyDJgf1xhxbSkgN5JfJBOaVbOmV0Qicfb0e8d5",
+                  "type": "text"
+                }
+              ],
+              "url": {
+                "raw": "https://crispytalk.info/api/chats/1",
+                "protocol": "https",
+                "host": [
+                  "crispytalk",
+                  "info"
+                ],
+                "path": [
+                  "api",
+                  "chats",
+                  "1"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Send Chat Message",
+            "request": {
+              "method": "POST",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Authorization",
+                  "value": "Bearer 33|uHtJW3paIwdyDJgf1xhxbSkgN5JfJBOaVbOmV0Qicfb0e8d5",
+                  "type": "text"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n    \"message\": \"Hello, world!\"\n}"
+              },
+              "url": {
+                "raw": "https://crispytalk.info/api/chats/1/messages",
+                "protocol": "https",
+                "host": [
+                  "crispytalk",
+                  "info"
+                ],
+                "path": [
+                  "api",
+                  "chats",
+                  "1",
+                  "messages"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Initiate Call",
+            "request": {
+              "method": "POST",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Authorization",
+                  "value": "Bearer 33|uHtJW3paIwdyDJgf1xhxbSkgN5JfJBOaVbOmV0Qicfb0e8d5",
+                  "type": "text"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n    \"callee_id\": 2\n}"
+              },
+              "url": {
+                "raw": "https://crispytalk.info/api/calls/initiate",
+                "protocol": "https",
+                "host": [
+                  "crispytalk",
+                  "info"
+                ],
+                "path": [
+                  "api",
+                  "calls",
+                  "initiate"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Accept Call",
+            "request": {
+              "method": "PATCH",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Authorization",
+                  "value": "Bearer 33|uHtJW3paIwdyDJgf1xhxbSkgN5JfJBOaVbOmV0Qicfb0e8d5",
+                  "type": "text"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{}"
+              },
+              "url": {
+                "raw": "https://crispytalk.info/api/calls/1/accept",
+                "protocol": "https",
+                "host": [
+                  "crispytalk",
+                  "info"
+                ],
+                "path": [
+                  "api",
+                  "calls",
+                  "1",
+                  "accept"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Reject Call",
+            "request": {
+              "method": "PATCH",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Authorization",
+                  "value": "Bearer 33|uHtJW3paIwdyDJgf1xhxbSkgN5JfJBOaVbOmV0Qicfb0e8d5",
+                  "type": "text"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{}"
+              },
+              "url": {
+                "raw": "https://crispytalk.info/api/calls/1/reject",
+                "protocol": "https",
+                "host": [
+                  "crispytalk",
+                  "info"
+                ],
+                "path": [
+                  "api",
+                  "calls",
+                  "1",
+                  "reject"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "End Call",
+            "request": {
+              "method": "PATCH",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Authorization",
+                  "value": "Bearer 33|uHtJW3paIwdyDJgf1xhxbSkgN5JfJBOaVbOmV0Qicfb0e8d5",
+                  "type": "text"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{}"
+              },
+              "url": {
+                "raw": "https://crispytalk.info/api/calls/1/end",
+                "protocol": "https",
+                "host": [
+                  "crispytalk",
+                  "info"
+                ],
+                "path": [
+                  "api",
+                  "calls",
+                  "1",
+                  "end"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Get Call Details",
+            "request": {
+              "method": "GET",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Authorization",
+                  "value": "Bearer 33|uHtJW3paIwdyDJgf1xhxbSkgN5JfJBOaVbOmV0Qicfb0e8d5",
+                  "type": "text"
+                }
+              ],
+              "url": {
+                "raw": "https://crispytalk.info/api/calls/1",
+                "protocol": "https",
+                "host": [
+                  "crispytalk",
+                  "info"
+                ],
+                "path": [
+                  "api",
+                  "calls",
+                  "1"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "List Calls",
+            "request": {
+              "method": "GET",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Authorization",
+                  "value": "Bearer 33|uHtJW3paIwdyDJgf1xhxbSkgN5JfJBOaVbOmV0Qicfb0e8d5",
+                  "type": "text"
+                }
+              ],
+              "url": {
+                "raw": "https://crispytalk.info/api/calls",
+                "protocol": "https",
+                "host": [
+                  "crispytalk",
+                  "info"
+                ],
+                "path": [
+                  "api",
+                  "calls"
+                ]
+              }
+            },
+            "response": []
+          }
+        ]
+      }
+    ]
+  }
+  
