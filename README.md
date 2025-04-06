@@ -25,16 +25,16 @@ CrispyTalk.info is a multi-service platform built on a custom-optimized infrastr
 - Path: `/home/crispytalk/public_html/rtc`
 
 ### 🔸 **Tech Stack**
-| Component     | Tech                         |
-|---------------|------------------------------|
-| Backend API   | Laravel 11 + PostgreSQL      |
-| Realtime RTC  | Node.js + Socket.io          |
-| TURN/STUN     | Coturn                       |
-| Frontend App  | Flutter (Android/iOS/Web)    |
-| Real-time Bus | Redis                        |
-| Media Tools   | FFmpeg for video processing  |
-| Web Server    | Nginx (for API + RTC)        |
-| WordPress     | Reserved (not used here)     |
+| Component     | Tech                        |
+|---------------|-----------------------------|
+| Backend API   | Laravel 12 + PostgreSQL     |
+| Realtime RTC  | Node.js + Socket.io         |
+| TURN/STUN     | Coturn                      |
+| Frontend App  | Flutter (Android/iOS/Web)   |
+| Real-time Bus | Redis                       |
+| Media Tools   | FFmpeg for video processing |
+| Web Server    | Nginx (for API + RTC)       |
+| Reverse Proxy | Nginx Reverse Proxy         |
 
 ---
 
@@ -42,7 +42,7 @@ CrispyTalk.info is a multi-service platform built on a custom-optimized infrastr
 
 - **Server Provider**: DigitalOcean Droplet
 - **Wildcard SSL**: Configured for `*.crispytalk.info`
-- **PHP**: 8.3
+- **PHP**: 8.4
 - **Database**: PostgreSQL
 - **Message Queue**: Redis (used for real-time events)
 - **Reverse Proxy**: Nginx (optimized for Node.js + Laravel APIs)
@@ -52,7 +52,7 @@ CrispyTalk.info is a multi-service platform built on a custom-optimized infrastr
 
 ## ⚙️ Folder Structure
 
-/home/crispytalk/ ├── public_html/ │ ├── api/ # Laravel API (Laravel 11) │ └── rtc/
+/home/crispytalk/ ├── public_html/ │ ├── api/ # Laravel API (Laravel 12) │ └── rtc/
 
 # RTC Node.js Signaling Server
 
