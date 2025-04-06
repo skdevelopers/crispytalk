@@ -9,7 +9,7 @@
 CrispyTalk.info is a multi-service platform built on a custom-optimized infrastructure:
 
 ### 🔸 **Main Domain**: [`https://crispytalk.info`](https://crispytalk.info)
-- **API**: Laravel 11 backend with PostgreSQL
+- **API**: Laravel 12 backend with PostgreSQL
 - **Path**: `/home/crispytalk/public_html`
 - **Subfolder API Path**: `/home/crispytalk/public_html/api`
 - Handles:
